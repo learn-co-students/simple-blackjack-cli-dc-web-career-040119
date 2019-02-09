@@ -42,6 +42,11 @@ def hit?(card_total)
   prompt_user
   input = get_user_input
   # code hit? here
+  until input == 'h' || input == 's'
+    invalid_command
+    prompt_user
+    input = get_user_input
+  end
   card_total += deal_card if input == "h"
   card_total
 end
